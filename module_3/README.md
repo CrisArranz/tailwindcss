@@ -16,7 +16,7 @@ npx tailwindcss init
 ```
 
 ## 3º Configurar el archivo tailwind.config.js que nos acaba de generar
-<
+```
   module.exports = {
     content: [
       "./src/**/*.{js,jsx,ts,tsx}",
@@ -26,7 +26,7 @@ npx tailwindcss init
     },
     plugins: [],
   }
->
+```
 
 ## 4º Añadir las directivas de tailwind a nuestro index.css
 ```
