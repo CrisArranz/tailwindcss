@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Navbar, Gallery, Form, Loading } from "./components";
 
 const images = [
@@ -10,11 +11,14 @@ const images = [
 ];
 
 export default function App() {
+
+  const [darkMode, setDarkMode] = useState(false)
+
   return (
    <main className="bg-gradient-to-tr from-cyan-600 to-teal-600">
-    <Navbar />
-    <div className="flex justify-center mt-20">
-      <Loading color={'black'} tone={900}/>
+    <Navbar handleDark={() => setDarkMode(!darkMode)}/>
+    <div className={`${darkMode ? "dark": ""} flex justify-center my-20`}>
+      <Loading />
     </div>
     <Form />
     <Gallery images={images} />
