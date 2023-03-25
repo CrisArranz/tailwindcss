@@ -1,4 +1,4 @@
-import { Navbar, Gallery, Form } from "./components";
+import { Navbar, Gallery, Form, Loading } from "./components";
 
 const images = [
   { url: "https://picsum.photos/id/237/200/300", name: "imagen 1" },
@@ -13,6 +13,9 @@ export default function App() {
   return (
    <main className="bg-gradient-to-tr from-cyan-600 to-teal-600">
     <Navbar />
+    <div className="flex justify-center mt-20">
+      <Loading color={'black'} tone={900}/>
+    </div>
     <Form />
     <Gallery images={images} />
    </main>
